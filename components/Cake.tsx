@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import FloatingHearts from "./FloatingHearts";
-import MusicPlayer from "./MusicPlayer";
 import Gallery from "./Gallery";
 
 export default function Cake() {
@@ -16,9 +15,10 @@ export default function Cake() {
 
     if (audio) {
       try {
+        audio.currentTime = 0;
         await audio.play();
       } catch (err) {
-        console.log("Music could not play:", err);
+        console.error("Music could not play:", err);
       }
     }
 
@@ -46,8 +46,8 @@ export default function Cake() {
       }}
     >
       <FloatingHearts />
-      <MusicPlayer />
 
+      {/* Cake */}
       <motion.div
         initial={{ scale: 0, rotate: -20 }}
         animate={{ scale: 1, rotate: 0 }}
@@ -62,6 +62,7 @@ export default function Cake() {
         🎂
       </motion.div>
 
+      {/* Title */}
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -91,6 +92,7 @@ export default function Cake() {
         May all your dreams come true ✨
       </motion.p>
 
+      {/* Button */}
       <motion.button
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -121,6 +123,7 @@ export default function Cake() {
         Open Memories 📸
       </motion.button>
 
+      {/* Sparkles */}
       <div
         style={{
           position: "absolute",

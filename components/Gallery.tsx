@@ -9,7 +9,6 @@ export default function Gallery() {
 
   const photos = [
     { image: "/images/photo1.jpeg", text: "Meri Heroine 😍" },
-    { image: "/images/photo2.jpeg", text: "My Cinderella 👰🏼‍♀️" },
     { image: "/images/photo3.jpeg", text: "Your smile is my happiness 💕" },
     { image: "/images/photo4.jpeg", text: "You make life beautiful ❤️" },
     { image: "/images/photo5.jpeg", text: "Meri Pretty Girl ❤️" },
@@ -114,7 +113,8 @@ export default function Gallery() {
             style={{
               width:"100%",
               height:"350px",
-              objectFit:"cover"
+              objectFit: "contain",
+              background: "#111",
             }}
           />
 

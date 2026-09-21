@@ -2,21 +2,21 @@
 
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import Cake from "./Cake";
+import BirthdayWish from "./BirthdayWish";
 
 export default function Welcome() {
-  const [showCake, setShowCake] = React.useState(false);
+  const [showWish, setShowWish] = React.useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowCake(true);
+      setShowWish(true);
     }, 6000);
 
     return () => clearTimeout(timer);
   }, []);
 
-  if (showCake) {
-    return <Cake />;
+  if (showWish) {
+    return <BirthdayWish />;
   }
 
   return (
@@ -86,8 +86,7 @@ export default function Welcome() {
             background: "#fff",
             left: `${(index * 37) % 100}%`,
             top: `${(index * 61) % 100}%`,
-            boxShadow:
-              "0 0 10px rgba(255,255,255,0.8)",
+            boxShadow: "0 0 10px rgba(255,255,255,0.8)",
             pointerEvents: "none",
           }}
         />
@@ -142,7 +141,7 @@ export default function Welcome() {
           textTransform: "uppercase",
         }}
       >
-        A story made with love
+        A little birthday surprise
       </motion.p>
 
       {/* Main Heading */}
@@ -170,14 +169,13 @@ export default function Welcome() {
           fontSize: "clamp(42px, 10vw, 76px)",
           lineHeight: 1.05,
           fontWeight: 700,
-          textShadow:
-            "0 0 25px rgba(255,77,136,0.45)",
+          textShadow: "0 0 25px rgba(255,77,136,0.45)",
         }}
       >
         Happy Birthday
       </motion.h1>
 
-      {/* Jaan */}
+      {/* Alfiya */}
       <motion.h2
         initial={{
           opacity: 0,
@@ -199,14 +197,13 @@ export default function Welcome() {
           lineHeight: 1.1,
           fontWeight: 500,
           color: "#ff6f9c",
-          textShadow:
-            "0 0 30px rgba(255,77,136,0.6)",
+          textShadow: "0 0 30px rgba(255,77,136,0.6)",
         }}
       >
-        My Jaan ❤️
+        Alfiya ✨
       </motion.h2>
 
-      {/* Emotional Line */}
+      {/* Birthday Line */}
       <motion.p
         initial={{
           opacity: 0,
@@ -231,9 +228,9 @@ export default function Welcome() {
           lineHeight: 1.7,
         }}
       >
-        The day my favorite person
+        Wishing you a day filled with
         <br />
-        came into this world. ✨
+        happiness, smiles and beautiful moments. 🌸
       </motion.p>
 
       {/* Divider */}
@@ -280,7 +277,7 @@ export default function Welcome() {
           letterSpacing: "2px",
         }}
       >
-        YOUR LITTLE MOVIE IS ABOUT TO BEGIN
+        YOUR BIRTHDAY WISH IS ABOUT TO BEGIN
       </motion.p>
 
       {/* Loading Dots */}
@@ -325,7 +322,7 @@ export default function Welcome() {
           letterSpacing: "2px",
         }}
       >
-        MADE ESPECIALLY FOR YOU ❤️
+        MADE ESPECIALLY FOR YOU ✨
       </motion.p>
     </main>
   );
